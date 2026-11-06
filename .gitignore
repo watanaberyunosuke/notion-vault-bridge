@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+.vercel/
+node_modules/
+.venv/
+state/
+.vercel
+
+.DS_Store
+sample-run/

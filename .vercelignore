@@ -1,0 +1,13 @@
+.env*
+.git
+__pycache__
+**/__pycache__
+node_modules
+.venv
+tests
+sample-run
+examples
+work
+*.zip
+*.sqlite3
+*.log

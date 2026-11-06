@@ -1,0 +1,5 @@
+[project]
+name = "notion-vault-bridge"
+version = "0.2.0"
+dependencies = [ "psycopg[binary]==3.3.8" ]
+requires-python = "~=3.12.0"

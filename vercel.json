@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "public",
+  "functions": {
+    "api/sync.py": { "maxDuration": 300, "excludeFiles": "{.env*,tests/**,sample-run/**,examples/**}" },
+    "api/cron.py": { "maxDuration": 300, "excludeFiles": "{.env*,tests/**,sample-run/**,examples/**}" },
+    "api/webhook.mjs": { "maxDuration": 300 }
+  },
+  "crons": [{ "path": "/api/cron", "schedule": "0 19 * * *" }],
+  "headers": [{ "source": "/(.*)", "headers": [
+    { "key": "X-Content-Type-Options", "value": "nosniff" },
+    { "key": "Referrer-Policy", "value": "no-referrer" },
+    { "key": "Content-Security-Policy", "value": "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'" }
+  ] }]
+}
